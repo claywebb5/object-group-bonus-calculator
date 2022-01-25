@@ -40,3 +40,40 @@ const employees = [
 // Ask questions when you don't.
 
 console.log( employees );
+
+// for (let employee of employees){
+//   employee.annualSalary = Number(employee.annualSalary);
+//   // console.log(employee.annualSalary);
+// }; // End for loop to convert annualSalary to an integer
+
+// let employeeInfo = [];
+
+// function newEmpName
+
+// function newEmpProperties(name, employeeNumber, annualSalary, reviewRating){
+//   let empInfo = {};
+//     empInfo.name = name;
+//     empInfo.employeeNumber = employeeNumber;
+//     empInfo.annualSalary = annualSalary;
+//     empInfo.reviewRating = reviewRating;
+//   employeeInfo.push(empInfo);
+//   return employeeInfo;
+// }
+// newEmpProperties('Mayella', '89068', 35000, 1);
+// console.log(employeeInfo);
+
+function bonusPercent(employee){
+
+    if (employee.reviewRating <= 2){
+      console.log('No Bonus');
+    }
+    else {
+      console.log('Bonus!');
+      
+    }
+
+  return employee;
+}
+
+console.log(bonusPercent(employees[0]));
+
