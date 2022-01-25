@@ -61,28 +61,47 @@ for (let employee of employees){
 // }
 // newEmpProperties('Mayella', '89068', 35000, 1);
 // console.log(employeeInfo);
-
-function bonusPercent(employee){
-
+let empBaseBonusSum = 0;
+function baseBonus(employee){
     if (employee.reviewRating <= 2){
+      empBaseBonusSum = 0;
       console.log('No Bonus', employee.annualSalary * 0);
     }
-    else if (employee.reviewRating = 3){
+    else if (employee.reviewRating === 3){
+      empBaseBonusSum = .04;
       console.log('4% Bonus', employee.annualSalary * .04);
     }
-    else if (employee.reviewRating = 4){
+    else if (employee.reviewRating === 4){
+      empBaseBonusSum = .06;
       console.log('6% Bonus', employee.annualSalary * .06);
     }
-    else if (employee.reviewRating = 5){
+    else if (employee.reviewRating === 5){
+      empBaseBonusSum = .1;
       console.log('10% Bonus', employee.annualSalary * .1);
     }
+    console.log(empBaseBonusSum);
     
+   if (employee.employeeNumber.length == 4){
+     console.log('hey additional 5%');
+   }
+   if (employee.annualSalary > 65000){
+     console.log('Bonus down 1%');
+     
+   }
 
   return employee.name;
 }
 
-console.log(bonusPercent(employees[0]));
-console.log(bonusPercent(employees[1]));
-console.log(bonusPercent(employees[2]));
-console.log(bonusPercent(employees[3]));
-console.log(bonusPercent(employees[4]));
+console.log(baseBonus(employees[0]));
+console.log(baseBonus(employees[1]));
+console.log(baseBonus(employees[2]));
+console.log(baseBonus(employees[3]));
+console.log(baseBonus(employees[4]));
+
+function additionalBonus(employee){
+  console.log('In additionalBonus');
+  if (employee.length == 4) {
+    employee.annualSalary * .05
+  }
+}
+console.log(additionalBonus(employees[0]));
