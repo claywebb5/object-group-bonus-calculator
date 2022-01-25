@@ -41,10 +41,10 @@ const employees = [
 
 console.log( employees );
 
-// for (let employee of employees){
-//   employee.annualSalary = Number(employee.annualSalary);
-//   // console.log(employee.annualSalary);
-// }; // End for loop to convert annualSalary to an integer
+for (let employee of employees){
+  employee.annualSalary = Number(employee.annualSalary);
+  // console.log(employee.annualSalary);
+}; // End for loop to convert annualSalary to an integer
 
 // let employeeInfo = [];
 
@@ -65,15 +65,24 @@ console.log( employees );
 function bonusPercent(employee){
 
     if (employee.reviewRating <= 2){
-      console.log('No Bonus');
+      console.log('No Bonus', employee.annualSalary * 0);
     }
-    else {
-      console.log('Bonus!');
-      
+    else if (employee.reviewRating = 3){
+      console.log('4% Bonus', employee.annualSalary * .04);
     }
+    else if (employee.reviewRating = 4){
+      console.log('6% Bonus', employee.annualSalary * .06);
+    }
+    else if (employee.reviewRating = 5){
+      console.log('10% Bonus', employee.annualSalary * .1);
+    }
+    
 
-  return employee;
+  return employee.name;
 }
 
 console.log(bonusPercent(employees[0]));
-
+console.log(bonusPercent(employees[1]));
+console.log(bonusPercent(employees[2]));
+console.log(bonusPercent(employees[3]));
+console.log(bonusPercent(employees[4]));
